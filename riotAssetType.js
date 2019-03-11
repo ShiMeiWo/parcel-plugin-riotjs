@@ -10,7 +10,7 @@ class RiotAsset extends JSAsset {
     let config = this.package.riot ||
       (await this.getConfig(['.riotrc', '.riotrc.js'])) ||
       {}
-
+console.log(config);
     let transpiled = riot.compile(
       tagCode,
       Object.assign({sourcemap: this.options.sourceMap}, config),
